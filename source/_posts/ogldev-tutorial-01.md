@@ -7,6 +7,10 @@ tags:
 - ogldev
 ---
 # Tutorial01
+
+## 原文地址
+http://ogldev.atspace.co.uk/www/tutorial01/tutorial01.html
+
 ## 背景
 OpenGL没有特定的API用来创建和操作窗体。现今支持OpenGL的窗体系统中都有一套子系统来让窗体系统与OpenGL上下文绑定：X窗体有GLX，Windows系统有WGL，MacOS有CGL。如果在不同的窗体系统中编程要用到不同的窗体API，就太麻烦了，所有我们使用一个更高层次的库来提供统一的窗体API。这个库就是“`OpenGL utility library`”，简称 `GLUT`。GLUT提供了一套简单的API来进行窗体管理、事件处理、IO控制和一些其他工作。由于GLUT是跨平台的，所以移植程序很方便。GLUT的替代品包括`SDL`和`GLFW`。
 
@@ -57,12 +61,12 @@ glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
 这里我们配置了一些GLUT选项。`GLUT_DOUBLE`开启双缓冲模式(一个缓冲区用于显示，一个缓冲区用于绘图)。`GLUT_RGBA`指定窗口的颜色模式为RBGA。
 
 ```c++
-glutInitWindowSize(1024, 768); 
+glutInitWindowSize(1024, 768);
 ```
 指定窗口的大小为1024*768。
 
 ```c++
-glutInitWindowPosition(100, 100); 
+glutInitWindowPosition(100, 100);
 ```
 指定窗口的起始坐标为(100, 100)。
 
@@ -87,7 +91,7 @@ glutMainLoop();
 调用这个函数之后，我们就把程序的控制权交给了GLUT，它会开始一个内部的循环。在这个循环中，它会监听窗体系统的事件，并通过我们设置的回调函数将事件传递给我们。我们本程序中，GLUT只会调用我们注册的绘图函数（RenderSceneCB）来给我们机会去绘制帧的内容。
 
 ```c++
-glClear(GL_COLOR_BUFFER_BIT); 
+glClear(GL_COLOR_BUFFER_BIT);
 glutSwapBuffers();
 ```
 在我们的绘图函数中，我们做的唯一一件事就是利用我们设定好的颜色来清除帧缓冲区。第二个函数调用让GLUT交换前后缓冲区的角色。
