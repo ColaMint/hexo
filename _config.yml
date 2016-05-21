@@ -72,3 +72,6 @@ deploy:
 
 # Comment
 disqus_shortname: everley
+
+# RSS
+rss: /atom.xml
