@@ -37,7 +37,7 @@ struct ThreadParams
     unsigned long v; // Frequent read/write access variable
     unsigned long start;
     unsigned long end;
-    
+
     // expand to 64 bytes to avoid false-sharing
     // (4 unsigned long variables + 12 padding)*4 = 64
     int padding[12];
@@ -65,17 +65,17 @@ struct ThreadParams
     unsigned long end;
 };
 
-void threadFunc(void *parameter) 
+void threadFunc(void *parameter)
 {
     ThreadParams *p = (ThreadParams*) parameter;
     // local copy for read/write access variable
     unsigned long local_v = p->v;
-    
+
     for(local_v = p->start; local_v < p->end; local_v++)
     {
     // Functional computation
     }
-    
+
     p->v = local_v; // Update shared data structure only once
 }
 ```

@@ -3,7 +3,7 @@ menu:
   主页: /
   所有文章: /archives
   linux: /categories/linux
-  opengl: /categories/opengl
+  #opengl: /categories/opengl
 
 # SubNav
 subnav:
