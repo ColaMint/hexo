@@ -13,51 +13,48 @@ tags:
 
 # c++ Solution
 ```c++
-ass Solution {
+class Solution {
    public:
     int lengthLongestPath(string input) {
         input += '\n';
-        string* paths[100];
+        int pathPartLength[100];
         int tab = 0;
-        int maxTab = -1;
         bool append = false;
+        bool isFile = false;
         int maxLength = 0;
         for (string::iterator it = input.begin(); it != input.end(); ++it) {
-            char c = *it;
-            switch (c) {
+            switch (*it) {
                 case '\n': {
-                    if (paths[tab]->find('.', 0) != string::npos) {
+                    if (isFile) {
                         int curLength = 0;
                         for (int i = 0; i <= tab; ++i) {
-                            curLength += paths[i]->length();
+                            curLength += pathPartLength[i];
                         }
                         curLength += tab;
                         if (curLength > maxLength) {
                             maxLength = curLength;
                         }
                     }
-                    if (tab > maxTab) {
-                        maxTab = tab;
-                    }
                     tab = 0;
                     append = false;
+                    isFile = false;
                     break;
                 }
                 case '\t': {
                     tab += 1;
                     break;
                 }
+                case '.': {
+                    isFile = true;
+                }
                 default: {
                     if (!append) {
-                        paths[tab] = new string();
+                        pathPartLength[tab] = 0;
                         append = true;
                     }
-                    *paths[tab] += c;
+                    pathPartLength[tab] += 1;
                 }
             }
-        }
-        for (int i = 0; i <= maxTab; ++i) {
-            delete paths[i];
         }
         return maxLength;
     }
