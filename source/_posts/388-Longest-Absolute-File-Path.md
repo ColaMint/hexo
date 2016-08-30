@@ -13,12 +13,13 @@ tags:
 
 # c++ Solution
 ```c++
-class Solution {
+ass Solution {
    public:
     int lengthLongestPath(string input) {
         input += '\n';
-        string** paths = new string*[100];
+        string* paths[100];
         int tab = 0;
+        int maxTab = -1;
         bool append = false;
         int maxLength = 0;
         for (string::iterator it = input.begin(); it != input.end(); ++it) {
@@ -34,6 +35,9 @@ class Solution {
                         if (curLength > maxLength) {
                             maxLength = curLength;
                         }
+                    }
+                    if (tab > maxTab) {
+                        maxTab = tab;
                     }
                     tab = 0;
                     append = false;
@@ -51,6 +55,9 @@ class Solution {
                     *paths[tab] += c;
                 }
             }
+        }
+        for (int i = 0; i <= maxTab; ++i) {
+            delete paths[i];
         }
         return maxLength;
     }
