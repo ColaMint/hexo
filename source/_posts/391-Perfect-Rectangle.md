@@ -1,5 +1,5 @@
 ---
-title: 391_Perfect_Rectangle
+title: 391 Perfect Rectangle
 categories:
   - leetcode
 date: 2016-08-31 23:26:56
