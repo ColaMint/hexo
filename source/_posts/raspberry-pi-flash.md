@@ -1,7 +1,8 @@
 ---
 title: Raspberry Pi安装PepperFlash，让Chromium支持Flash
 tags:
-  - flash PepperFlash
+  - flash
+  - PepperFlash
 categories:
   - raspberry-pi
 date: 2016-10-15 11:42:29

@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Everley's Blog 
+title: Everley's Blog
 subtitle: 一蓑烟雨任平生
 description:
-author: Everley 
+author: Everley
 language: zh
-timezone: Asia/Chongqing 
+timezone: Asia/Chongqing
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.everley.me 
+url: http://blog.everley.me
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia  
+theme: yilia
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -71,7 +71,7 @@ deploy:
   type:
 
 # Comment
-disqus_shortname: everley
+# disqus_shortname: everley
 
 # RSS
 rss: /atom.xml
