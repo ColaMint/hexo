@@ -2,9 +2,9 @@
 title: False Sharing
 date: 2016-05-21 10:49:07
 categories:
-- linux
+  - linux
 tags:
-- false sharing
+  - false sharing
 ---
 # Cache Line
 CPU中的缓存被划分为大小一致的缓存行，通常缓存行的大小是32Bytes或64Bytes。CPU以缓存行为单位把热数据从内存加载到缓存中。

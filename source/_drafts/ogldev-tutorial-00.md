@@ -2,9 +2,9 @@
 title: ogldev-tutorial-00
 date: 2016-05-21 10:57:13
 categories:
-- opengl
+  - opengl
 tags:
-- ogldev
+  - ogldev
 ---
 # 教程介绍
 本教程内容来源于http://ogldev.atspace.co.uk/ ，之后将该教程简称为ogldev

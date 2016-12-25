@@ -2,9 +2,9 @@
 title: ogldev-tutorial-02
 date: 2016-05-21 15:37:46
 categories:
-- opengl
+  - opengl
 tags:
-- ogldev
+  - ogldev
 ---
 # Tutorial02
 

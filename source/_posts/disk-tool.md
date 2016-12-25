@@ -2,9 +2,9 @@
 title: 磁盘工具
 date: 2016-07-30 08:13:58
 categories:
-- linux
+  - linux
 tags:
-- disk
+  - disk
 ---
 # df - 查看磁盘空间占用情况
 ```bash
